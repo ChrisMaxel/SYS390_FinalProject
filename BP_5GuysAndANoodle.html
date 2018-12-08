@@ -1,0 +1,407 @@
+<meta charset="utf-8">
+
+                         **Business Proposal**
+                        **5 Guys and a Noodle**
+    Caleb Anthony, Spencer Haeggberg, Matt Hapner, Chris Maxel, Nic Rose, Jake Stone
+                    236 West Reade Ave, Upland, IN 46989
+                    [www.taylor.edu](https://www.taylor.edu)
+
+
+
+Introduction - Spencer
+===============
+
+    Purpose
+    ---------------
+    The purpose for this business proposal is to provide Arco Church with several solutions in order to better 
+    manage the classes that they provide to the community. The primary goal is for users to be able to join 
+    classes and view details of said class as well as for teachers to manage the classes they are to instruct.
+    
+    Once a user signs up, they will be limited to taking the introductory course. Once they are finished with 
+    that course, a variety of others will open up for them to be able to take. There will also be a method of 
+    sending messages between students and teachers in order to answer questions or communicate other various 
+    pieces of data.
+    
+    It is the intention of Five Guys and a Noodle to to suggest the best possible solution for Arco Church. 
+    Should that solution be a new system built from scratch, it is our goal that at the most basic level, we 
+    adhere to Crosby’s four absolutes of quality in order to ensure the best possible product. Firstly, it 
+    is our intention to conform to the requirements that were given by Arco Church. It is also our intention 
+    to create a quality product by preventing errors from occurring in the first place rather than seeking 
+    out the source of the error after it has been implemented. Thirdly, our standards for performance are 
+    held at zero defects. Even one defect prevents the product from being the highest quality that it could 
+    be. Finally, non conformance to requirements is how we intend to measure quality. Should one of the 
+    requirements not be met, what is the cost to fix it?
+    
+    This document will outline the requirements of this application and show how we intend to meet said 
+    requirements. Specifically, it will provide details of alternative solutions that could be selected in 
+    lieu of a custom one should that prove to be the more productive route.
+
+    Problem Definition
+    ------------------
+    Arco Church’s current method of managing classes is not sufficient for their needs. 
+    A more robust system that is capable of handling more data in a more streamlined and error resistant 
+    manner is required. This application will be designed to fix that problem. It will increase the ease 
+    of users to sign up for classes as well as make the process for teachers to manage their students and 
+    class material more simple. It will decrease time required to sign up for and manage classes as well 
+    as increase ease of use for all parties involved.
+
+
+
+Customer Details - Hapner
+================
+	Our customer is Arco Church, a Christian organization based out of Cuenca, Ecuador. 
+	The church began in 1987 under the name Verbo Ministries and has since grown to a congregation of over 2,000 members. 
+	As the customer, they are also the primary stakeholder for this application.
+	Our team interfaced primarily with Jonathan Guido and his brother, Joel Guido. 
+	Jonathan serves as an administrator for the Arco’s facilities and Sunday morning services, and Joel serves as an executive pastor. 
+	Both of their main tasks involve carrying out the vision of the church’s elders.
+	Development of the application will begin in Spring of 2019 by students of the Information Systems Design course. 
+	Initially, there will be no monetary cost associated with the labor of students. However, 
+	all expenses incurred, such as obtainment of servers or ongoing maintenance of these servers, will be funded by Arco Church.
+
+
+    Customer Mission
+    -----------------
+		Arco is a church that is passionate to bring the name of Christ to the world and even more passionate about growing as a unified church body. 
+		Their statement of vision is “to grow together in covenant relationship under the Lordship of Jesus Christ,” 
+		and their statement of purpose is “to fulfill our individual and corporate calling to bring God’s love to the world through evangelism, discipleship and loving service.” 
+		Today, they use several ministerial avenues to carry out their mission, one of which is the Global Engagement Center. 
+		This center was formed through a partnership with Taylor University over ten years ago and mutually serves to both grow the church 
+		and provide cross-cultural opportunities for Taylor students. 
+		The application that Arco Church is requesting (and we are proposing) will help to meet their current vision of simplifying the processes within the church.
+
+
+    Customer Organizational Charts
+    ------------------------------
+	    ![Figure [CustomerOrganizationalChart1]: CustomerOrganizationalChart1](imagesForBP/OrganizationalCharts/CustomerOrganizationalChart1.jpg)
+	    ![Figure [CustomerOrganizationalChart2]: CustomerOrganizationalChart2](imagesForBP/OrganizationalCharts/CustomerOrganizationalChart2.jpg)
+	
+	
+Non-Customer Stakeholders - Hapner
+=========================
+	Non-customer stakeholders include any individual or party, outside of the previously stated customer, that will be affected by the outcome of this proposed application. 
+	These stakeholders can (and will) have varying levels of involvement in the decision making and development process surrounding this application.
+	
+	Teachers
+	--------------------
+	Teachers in charge of classes offered by Arco will now have a centralized system to manage class information. 
+	Once the teachers get over the learning curve of our application, they will be able to easily see statistics about their class and track attendance. 
+	In addition, teachers will be able to communicate easily between students of the class. 
+	This system will save a lot of hassle and time for teachers that are currently relying on basic excel worksheets to track important data.
+
+	Students
+	--------------------
+	Students will be able to view and sign up for classes online. 
+	No longer will they have to repeatedly ask about questions like “what is that class about again?” or “which classes do I need to take before I take that class?” 
+	All class descriptions will be readily available to them. Moreover, teachers will not have to worry about students signing up for classes they are ineligible for. 
+	Prerequisites will be tracked and an extensive history of completed classes can be viewed at any time by a student.
+
+	Church Members
+	-------------------
+	Every church member will be given the opportunity to create an account for this application. 
+	Although the application is mostly built as a class management system, 
+	it will still provide features like a calendar and public message board that will contain important information about church services and events.
+	
+	The General Public
+	-------------------
+	The general public will be indirectly benefited by this application. 
+	By freeing up their time and simplifying a lot of their processes, the church will be given ample opportunity to allocate more resources to the public.
+	
+	5 Guys and a Noodle
+	-------------------
+	Our team will be affected by this project through the experience gained, relationships formed, and time spent in development.
+
+	
+Problem Analysis - Caleb
+================
+
+    Situation Description
+    ---------------------
+	Arco Church currently is in need of an application that will allow church members to attend classes and keep track of their progress much more efficiently. 
+	Their current method of course management  is using a localized spreadsheet, 
+	this makes keeping track of member attendance and class progress difficult as multiple teachers and students have to record or  report their numbers to the church. 
+	When it comes to taking courses, members do not have much of aid when it comes to choosing courses they qualify for. 
+	Teachers also have a difficult time keeping track of members who have or have not paid for the course. Overall, 
+	the process of teaching and attending classes could use much needed simplification and centralization.
+	
+	The environment around Arco Church speaks primarily Spanish and may not be as adept with technology as our team is. 
+	This may possibly lead to disconnects between the church technology and the local congregation. 
+	There is a high need for a positive user experience and simplicity too keep members engaged. 
+	Because of recent church attendance rates, attention has been brought to the need for recording and potential analysis of rates and reasons why members are coming or leaving. 
+	The need for more smooth communication between church leaders and administrators has also been brought to light during our situation analysis. 
+	Having a platform where administrators could communicate easily would be a huge benefit when it comes to planning events or spreading general information.
+
+	
+    KT Situation Description
+    ------------------------
+
+    Goals for The Systems
+    ---------------------
+
+Solution Alternatives - Maxel
+=====================
+
+    Proprietary Solutions
+    ---------------------
+	###	[Breeze](https://www.breezechms.com)
+	
+		Breeze is a church software management system, that charges monthly, no matter the size of the church, that can help members quickly look up people of the church. 
+		The leaders can organize and communicate with groups.  Admins can track and generate reports.  This software is aimed at small to medium churches. 
+		While simple breeze does not have much power, meaning that it will not be able to handle a church if it starts growing bigger.
+		 
+	### [Servant Keeper](https://www.servantpc.com/)
+	
+		Servant Keeper is an application that is intended to be used in the church, specifically with a small budget.  
+		It has an impeccable homepage with charts and detailed statistics to view ministry health. 
+		It has a solid user interface that is easy to use and customize to the user’s liking. 
+		It has unique grouping tools that allow for mass emails and attendance tracking.  The application as a whole is greatly equipped but is generally dull.
+		  
+	### [Moodle](https://moodle.org/)
+	
+		 Moodle is a learning platform that has a focus built around effective teaching.  
+		 Moodle supports multiple languages, account hierarchy, class tracking and progress, a calendar, and many more features.  
+		 It is open source meaning modules and add-ons can be created and implemented.  
+		 Communication through this application is weak and lacks a good messaging user interface.
+
+	### [Blackboard ](https://www.blackboard.com/about-us/index.html)
+	
+		Blackboard is a tool with the intended use of education. 
+		This product could  accomplish some of the wants we are pursuing. 
+		It has a variety of tools that have a weak user interface that can often be confusing. 
+		Blackboard has a great deal of functionality but not of high quality and user-friendliness.
+
+    Custom Build Options
+    --------------------
+	###  Custom Build
+	
+		A custom approach allows the customer to pick and choose features to satisfy desired wants. 
+		Having a custom home page that connects and uses data (such as calendar events) from their other web pages is a considerable advantage 
+		as it is an add-on to what is already in place. Custom builds can allow for the growth of the church to reach their desired numbers and fix long-term issues. 
+		A custom option allows a hierarchy of roles to be set up as needed. Data will be displayed in the ways required for a functional and usable form with a focus on attendance. 
+		The current system that is already in place can be integrated into the new custom build management tool. 
+		Communication is a highly sought after portion of this application, having the ability to share information efficiently is a high priority for this custom build.
+
+
+Solution Analysis - Noodles
+=================
+
+    Must and Wants Description 
+    --------------------
+        | *Musts*                         |
+        |:-------------------------------:|
+        | Hierarchy of account privileges |
+        | Class Management System         |
+
+        | *Wants*                                   | *Description*                                                                                                                                  | *Weight* |
+        |-------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|:--------:|
+        | Spanish Translation                       | Application supports an English to Spanish translation                                                                                         | 20%      |
+        | User Statistics Tracking                  | Information (i.e, attendance, payment status, name, completion, etc.) is actively tracked and easily accessible/presentable                    | 12%      |
+        | Detailed Class Statistics Tracking        | Information (i.e, prerequisites, location, class title, description, teacher name, etc.) is actively tracked and easily accessible/presentable | 10%      |
+        | Account Creation by Admins                | Accounts can be created for users by higher privileged accounts                                                                                | 8%       |
+        | Admin-Only Communication                  | Feature for higher privilege accounts to communicate exclusively to each other                                                                 | 8%       |
+        | Message Board                             | Higher privileged accounts can post messages to a board viewable to any user                                                                   | 8%       |
+        | Current Data Integration                  | Current database can be integrated into new system                                                                                             | 7%       |
+        | Calendar                                  | Easily-accessible calendar that displays information (i.e, events, sermons, meetings, etc.)                                                    | 5%       |
+        | Contact Us Page                           | Page designed to provide information for feedback, questions, communication, etc.                                                              | 5%       |
+        | View Only Access for Non-registered Users | Vital information presented on a page that unregistered users can access upon visiting website                                                 | 5%       |
+        | Lesson Plan Upload                        | Teachers can customize and upload lesson plans to their class page                                                                             | 4%       |
+        | Group Email                               | Teacher can send out mass emails to students, other teachers, and admins                                                                       | 4%       |
+        | Mobile Friendly                           | Application is accessible and efficient on a mobile device                                                                                     | 2%       |
+        | Third Party Messaging Application         | Application includes a third party messaging application (i.e, WhatsApp, message, etc.) for internal use                                       | 2%       |
+        [General Information]
+
+    KT Decision Analysis
+    --------------------
+
+        ### Custom Build
+            | Wants                                     | Weight | Comments                                                     | Score | Weighted Score |
+            |-------------------------------------------|:------:|--------------------------------------------------------------|:-----:|:--------------:|
+            | Spanish Translation                       | 20     |                                                              | 10    | 20             |
+            | User Statistics Tracking                  | 12     |                                                              | 10    | 12             |
+            | Detailed Class Statistic Tracking         | 10     |                                                              | 10    | 10             |
+            | Account Creation by Admins                |  8     |                                                              | 10    | 8              |
+            | Admin-Only Communication                  |  8     |                                                              | 10    | 8              |
+            | Message Board                             |  8     |                                                              | 10    | 8              |
+            | Current Data Integration                  |  7     |                                                              | 10    | 7              |
+            | Calendar                                  |  5     |                                                              | 10    | 5              |
+            | Contact Us Page                           |  5     |                                                              | 10    | 5              |
+            | View Only Access for Non-registered Users |  5     |                                                              | 10    | 5              |
+            | Lesson Plan Upload                        |  4     |                                                              | 10    | 4              |
+            | Group Email                               |  4     |                                                              | 10    | 4              |
+            | Mobile Friendly                           |  2     | Lower priority but we plan to implement them in future steps |  5    | 1              |
+            | Third Party Messaging Application         |  2     | Lower priority but we plan to implement them in future steps |  5    | 1              |
+            | Total                                     | 100    | - - - - - - - - - - - - - - - - - - - - - -                  | Total | 98             |
+            [Faults: (2)]
+
+            ![Figure [NPV_CustomBuild]: Net Present Value for the Custom Build](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_CustomBuild.JPG)
+
+       ### Breeze (Buy)
+            | Wants                                     | Weight | Comments                                                                | Score | Weighted Score |
+            |-------------------------------------------|:------:|-------------------------------------------------------------------------|:-----:|:--------------:|
+            | Spanish Translation                       | 20     | No support for different languages                                      | 0     | 0              |
+            | User Statistics Tracking                  | 12     | No attendance statistic tracking                                        | 7.5   | 9              |
+            | Detailed Class Statistic Tracking         | 10     | Not enough class details (prerequisites, etc.)                          | 5     | 5              |
+            | Account Creation by Admins                |  8     | Admins cannot create accounts for general users                         | 0     | 0              |
+            | Admin-Only Communication                  |  8     |                                                                         | 10    | 8              |
+            | Message Board                             |  8     |                                                                         | 7.5   | 6              |
+            | Current Data Integration                  |  7     | Some kind of integration but not fully compatible with current database | 5     | 3.5            |
+            | Calendar                                  |  5     |                                                                         | 10    | 5              |
+            | Contact Us Page                           |  5     |                                                                         | 10    | 5              |
+            | View Only Access for Non-registered Users |  5     |                                                                         | 10    | 5              |
+            | Lesson Plan Upload                        |  4     |                                                                         | 10    | 4              |
+            | Group Email                               |  4     |                                                                         | 10    | 4              |
+            | Mobile Friendly                           |  2     |                                                                         | 10    | 2              |
+            | Third Party Messaging Application         |  2     |                                                                         | 10    | 2              |
+            | Total                                     | 100    | - - - - - - - - - - - - - - - - - - - - - -                             | Total | 58.5           |
+            [Faults: (41.5)]
+
+            ![Figure [NPV_Breeze]: Net Present Value for Breeze](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_Breeze.JPG)
+
+        ### Servant Keeper (Buy)
+            | Wants                                     | Weight | Comments                                                                | Score | Weighted Score |
+            |-------------------------------------------|:------:|-------------------------------------------------------------------------|:-----:|:--------------:|
+            | Spanish Translation                       | 20     | No support for different languages              						   | 0     | 0              |
+            | User Statistics Tracking                  | 12     |                                                 					       | 7.5   | 9              |
+            | Detailed Class Statistic Tracking         | 10     |                                                 						   | 7.5   | 7.5            |
+            | Account Creation by Admins                |  8     | Admins cannot create accounts for general users 						   | 0     | 0              |
+            | Admin-Only Communication                  |  8     |                                                 					       | 10    | 8              |
+            | Message Board                             |  8     | Not fully functional message board              						   | 5     | 4              |
+            | Current Data Integration                  |  7     | No kind of current data integration            					  	   | 0     | 0              |
+            | Calendar                                  |  5     | Not fully functional calendar                  						   | 5     | 2.5            |
+            | Contact Us Page                           |  5     |                                                						   | 7     | 3.5            |
+            | View Only Access for Non-registered Users |  5     |                                                 						   | 10    | 5              |
+            | Lesson Plan Upload                        |  4     | Limited data upload                            						   | 3     | 1.2            |
+            | Group Email                               |  4     |                                                						   | 10    | 4              |
+            | Mobile Friendly                           |  2     |                                               						   | 10    | 2              |
+            | Third Party Messaging Application         |  2     |                                                					 	   | 10    | 2              |
+            | Total                                     | 100    | - - - - - - - - - - - - - - - - - - - -         						   | Total | 48.7           |
+            [Faults: (51.3)]
+
+            ![Figure [NPV_ServantKeeper]: Net Present Value for ServantKeeper](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_ServantKeeper.JPG)
+
+        ### Moodle (Buy)
+            | Wants                                     | Weight | Comments                                              | Score | Weighted Score |
+            |-------------------------------------------|:------:|-------------------------------------------------------|:-----:|:--------------:|
+            | Spanish Translation                       | 20     |                                                       | 10    | 20             |
+            | User Statistics Tracking                  | 12     |                                                       | 7.5   | 9              |
+            | Detailed Class Statistic Tracking         | 10     |                                                       | 9     | 9              |
+            | Account Creation by Admins                |  8     |                                                       | 10    | 8              |
+            | Admin-Only Communication                  |  8     |                                                       | 10    | 8              |
+            | Message Board                             |  8     |                                                       | 10    | 8              |
+            | Current Data Integration                  |  7     | No kind of current data integration                   | 0     | 0              |
+            | Calendar                                  |  5     |                                                       | 10    | 5              |
+            | Contact Us Page                           |  5     | Doesn't fully include desired page                    | 7     | 3.5            |
+            | View Only Access for Non-registered Users |  5     | Essentially no page viewable for non-registered users | 3     | 1.5            |
+            | Lesson Plan Upload                        |  4     |                                                       | 10    | 4              |
+            | Group Email                               |  4     |                                                       | 10    | 4              |
+            | Mobile Friendly                           |  2     |                                                       | 10    | 2              |
+            | Third Party Messaging Application         |  2     | Supports in app messaging                             | 5     | 1              |
+            | Total                                     | 100    | - - - - - - - - - - - - - - - - - - - - -             | Total | 83             |
+            [Faults: (17)]
+
+            ![Figure [NPV_Moodle]: Net Present Value for Moodle](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_Moodle.JPG)
+
+        ### Blackboard (Buy)
+            | Wants                                     | Weight | Comments                                    | Score | Weighted Score |
+            |-------------------------------------------|:------:|---------------------------------------------|:-----:|:--------------:|
+            | Spanish Translation                       | 20     |                                             | 8     | 16             |
+            | User Statistics Tracking                  | 12     | Can't track all of desired statistics       | 5     | 6              |
+            | Detailed Class Statistic Tracking         | 10     |                                             | 7     | 7              |
+            | Account Creation by Admins                |  8     |                                             | 10    | 8              |
+            | Admin-Only Communication                  |  8     | Supports only in app communication          | 5     | 4              |
+            | Message Board                             |  8     |                                             | 10    | 8              |
+            | Current Data Integration                  |  7     | No kind of current data integration         | 0     | 0              |
+            | Calendar                                  |  5     |                                             | 10    | 5              |
+            | Contact Us Page                           |  5     | Function not available                      | 0     | 0              |
+            | View Only Access for Non-registered Users |  5     | No page viewable for non-registered users   | 0     | 0              |
+            | Lesson Plan Upload                        |  4     |                                             | 10    | 4              |
+            | Group Email                               |  4     |                                             | 10    | 4              |
+            | Mobile Friendly                           |  2     |                                             | 7.5   | 1.5            |
+            | Third Party Messaging Application         |  2     |                                             | 10    | 5              |
+            | Total                                     | 100    | - - - - - - - - - - - - - - - - - - -       | Total | 65.5           |
+            [Faults: (34.5)]
+
+            ![Figure [NPV_Blackboard]: Net Present Value for Blackboard](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_Blackboard.JPG)
+
+        <!-- ### Name
+            | Wants                                     | Weight | Comments                                    | Score | Weighted Score |
+            |-------------------------------------------|:------:|---------------------------------------------|:-----:|:--------------:|
+            | Spanish Translation                       | 20     |                                             |       |                |
+            | User Statistics Tracking                  | 12     |                                             |       |                |
+            | Detailed Class Statistic Tracking         | 10     |                                             |       |                |
+            | Account Creation by Admins                |  8     |                                             |       |                |
+            | Admin-Only Communication                  |  8     |                                             |       |                |
+            | Message Board                             |  8     |                                             |       |                |
+            | Current Data Integration                  |  7     |                                             |       |                |
+            | Calendar                                  |  5     |                                             |       |                |
+            | Contact Us Page                           |  5     |                                             |       |                |
+            | View Only Access for Non-registered Users |  5     |                                             |       |                |
+            | Lesson Plan Upload                        |  4     |                                             |       |                |
+            | Group Email                               |  4     |                                             |       |                |
+            | Mobile Friendly                           |  2     |                                             |       |                |
+            | Third Party Messaging Application         |  2     |                                             |       |                |
+            | Total                                     | 100    | - - - - - - - - - - - - - - - - - - - - - - | Total |                |
+            [Comment] -->
+
+
+    Net Present Value
+    -----------------
+    	![Figure [NPV_CustomBuild]: Net Present Value for the Custom Build](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_CustomBuild.JPG)
+		![Figure [NPV_Breeze]: Net Present Value for Breeze](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_Breeze.JPG)
+		![Figure [NPV_ServantKeeper]: Net Present Value for ServantKeeper](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_ServantKeeper.JPG)
+    	![Figure [NPV_Moodle]: Net Present Value for Moodle](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_Moodle.JPG)
+    	![Figure [NPV_Blackboard]: Net Present Value for Blackboard](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_Blackboard.JPG)
+	
+
+    Cost-Benefit Analysis
+    ---------------------
+    ![Figure [Testies]: Testies ](https://www.google.com) 
+
+Recommendation - Group
+===============
+
+
+
+
+
+
+<!--    Don't touch the items bellow     -->
+
+<!-- The script and style below are added for clarity and to workaround a bug -->
+<script>
+    // this is a hack to workaround a bug in Markdeep+Mathjax, where
+    // &#36; is automatically converted to \( and \) too soon.
+    // the following code will replace the innerHTML of all elements
+    // with class "dollar" with a dollar sign.
+    setTimeout(function() {
+        var dollars = document.getElementsByClassName('dollar');
+        for(var i = 0; i < dollars.length; i++) {
+            dollars[i].innerHTML = '&#' + '36;';
+        }
+    }, 1000);
+</script>
+<style>
+    /* adding some styling to <code> tags (but not <pre><code> coding blocks!) */
+    :not(pre) > code {
+        background-color: rgba(0,0,0,0.05);
+        outline: 1px solid rgba(0,0,0,0.15);
+        margin-left: 0.25em;
+        margin-right: 0.25em;
+    }
+    .md h1, .md .nonumberh1 {page-break-before:always}
+    body{font-family: Times New Roman}
+
+    /*.tb {align-items: left}*/
+</style>
+
+<!--Themes-->
+    <!--Dark theme-->
+        <!--link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/dark.css?"-->
+    <!--Presentation Formatt-->
+        <!-- <link rel="stylesheet" href="https://casual-effects.com/markdeep/latest/slides.css?"> -->
+
+
+
+<!-- This [Markdeep](https://casual-effects.com/markdeep/) document is based on a template created by Dr. Denning. -->
+<!-- This template is based on the Princeton COS 423 LaTeX assignment template -->
+<!-- Markdeep: --><style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="markdeep.min.js"></script><script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
