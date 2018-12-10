@@ -17,12 +17,13 @@ Introduction
     manage the classes that they provide to the community. The primary goal is for users to be able to join 
     classes and view details of said class as well as for teachers to manage the classes they are to instruct.
     
-    Once a user signs up, they will be limited to taking the introductory course. Once they are finished with 
+    <!-- Once a user signs up, they will be limited to taking the introductory course. Once they are finished with 
     that course, a variety of others will open up for them to be able to take. There will also be a method of 
     sending messages between students and teachers in order to answer questions or communicate other various 
-    pieces of data.
+    pieces of data. -->
+    <!-- Replace with need of church (i.e. events and calendar stuff. Very brief) -->
     
-    It is the intention of Five Guys and a Noodle to to suggest the best possible solution for Arco Church. 
+    It is the intention of Five Guys and a Noodle to suggest the best possible solution for Arco Church. 
     Should that solution be a new system built from scratch, it is our goal that at the most basic level, we 
     adhere to Crosby’s four absolutes of quality in order to ensure the best possible product. Firstly, it 
     is our intention to conform to the requirements that were given by Arco Church. It is also our intention 
@@ -40,10 +41,10 @@ Introduction
     ------------------
     Arco Church’s current method of managing classes is not sufficient for their needs. 
     A more robust system that is capable of handling more data in a more streamlined and error resistant 
-    manner is required. This application will be designed to fix that problem. It will increase the ease 
-    of users to sign up for classes as well as make the process for teachers to manage their students and 
-    class material more simple. It will decrease time required to sign up for and manage classes as well 
-    as increase ease of use for all parties involved.
+    manner is required. It is our goal to provide the customer with the best possible solution to fix that 
+    problem. It will increase the ease of users to sign up for classes as well as make the process for 
+    teachers to manage their students and class material more simple. It will decrease time required to 
+    sign up for and manage classes as well as increase ease of use for all parties involved.
 
 
 
@@ -51,7 +52,7 @@ Customer Details
 ================
 	Our customer is Arco Church, a Christian organization based out of Cuenca, Ecuador. The church was founded
 	1987 under the name Verbo Ministries and has since grown to a congregation of over 2,000 members.  
-	As the customer, they are also the primary stakeholder for this application.  Our team interfaced 
+	As the customer, they are also the main stakeholder for this application.  Our team interfaced 
 	primarily with Jonathan Guido and his brother, Joel Guido.  Jonathan serves as an administrator for 
 	the Arco’s facilities and Sunday morning services, and Joel serves as an executive pastor.  Both of 
 	their main tasks involve carrying out the vision of the church’s elders.  
@@ -130,11 +131,11 @@ Problem Analysis
 ================
     Situation Description
     ---------------------
-		Arco Church is currently in need of an application that will allow church members to attend classes and 
+		Arco Church is currently in need of an application that will allow any individual to attend classes and 
 		keep track of their progress more efficiently. Their current method of course management uses a 
 		localized spreadsheet. This makes keeping track of member attendance and class progress difficult as multiple 
 		teachers and students have to record or report their numbers to the church. When it comes to taking courses, 
-		members do not have much in the way of aid when it comes to choosing courses they qualify for. Teachers also have a 
+		members do not have much in the way of aid <!-- when it comes --> to choosing courses they qualify for. Teachers also have a 
 		difficult time keeping track of members who have or have not paid for the course. Overall, the process of 
 		teaching and attending classes could use much-needed simplification and centralization.
 		
@@ -151,18 +152,18 @@ Problem Analysis
 	
     KT Situation Description
     ------------------------
-    	| List Concern                       | Clarify Concerns                                                                                    | Severity                                                                                                                                 | Urgency                                                                               | Growth                                                                        |
-    	| ---------------------------------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-    	| Sunday Service Attendance          | 15-30 new people are going to church each Sunday, but they are losing the same amount               | High (the church is very growth focused, but the church isn’t growing because people are leaving)                                        | Low (very stagnant, there are no trends of the church losing people)                  | Low (hasn’t changed recently)                                                 |
-    	| Class Attendance                   | Some people sign up for classes but aren’t committed and some people miss classes                   | High (classes lose significance if people aren’t going and spots in the class could be taken up by people who aren’t actually attending) | Low (the church is surviving without addressing this issue)                           | Low (this has been a problem for a while and hasn’t changed)                  |
-    	| Data Management                    | What data needs to be tracked and how to centralize data                                            | High (they need to know and understand that data to answer other concerns)                                                               | Low (they haven’t been doing anything about it up until now)                          | Moderate (as they continue to collect data, there’s more data to consolidate) |
-    	| Communication                      | Need to simplify current communication between church authorities and communication to congregation | Moderate (Important questions need to be answered efficiently)                                                                           | Low (The current solution they have is working, just not efficiently)                 | Low (nothing has changed about communication recently)                        |
+    	| List Concern                       | Clarify Concerns                                                                                    | Severity                                                                                                                                      | Urgency                                                                                   | Growth                                                                            |
+    	| ---------------------------------- | --------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: |
+    	| Sunday Service Attendance          | 15-30 new people are going to church each Sunday, but they are losing the same amount               | High <br> (the church is very growth focused, but the church isn’t growing because people are leaving)                                        | Low <br>(very stagnant, there are no trends of the church losing people)                  | Low <br>(hasn’t changed recently)                                                 |
+    	| Class Attendance                   | Some people sign up for classes but aren’t committed and some people miss classes                   | High <br> (classes lose significance if people aren’t going and spots in the class could be taken up by people who aren’t actually attending) | Low <br>(the church is surviving without addressing this issue)                           | Low <br>(this has been a problem for a while and hasn’t changed)                  |
+    	| Data Management                    | What data needs to be tracked and how to centralize data                                            | High <br>(they need to know and understand that data to answer other concerns)                                                                | Low <br>(they haven’t been doing anything about it up until now)                          | Moderate <br>(as they continue to collect data, there’s more data to consolidate) |
+    	| Communication                      | Need to simplify current communication between church authorities and communication to congregation | Moderate <br>(Important questions need to be answered efficiently)                                                                            | Low <br>(The current solution they have is working, just not efficiently)                 | Low <br>(nothing has changed about communication recently)                        |
     	
-    	| List Concern                       | Clarify Concerns                                                                                    | Severity                                                                                                                                 | Urgency                                                                               | Growth                                                                        |
-    	| ---------------------------------- | --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
-    	| Privacy                            | Some data is being tracked that should be visible to only certain individuals                       | Moderate (it can be dangerous for people’s information to get out)                                                                       | Low (not a concern now as this data is not available as it hasn’t been collected yet) | Low (no change recently as the data doesn’t exist as it isn’t collected yet)  |
-    	| Integration with existing database | Being able to combine existing data with new data                                                   | Moderate-High (it’s important to have one consolidated database)                                                                         | Low (not an issue yet as data isn’t being combined)                                   | Low (no change as there isn’t a pair of databases to consolidate yet)         |
-    	| Language Complications             | Existing processes may be biased towards one language                                               | Low (Language can be translated, but not cleanly)                                                                                        | Moderate-Low (Certain tasks may be taking longer to complete)                         | Medium (The longer a task takes, the more consequences occur)                 |
+    	| List Concern                       | Clarify Concerns                                                                                    | Severity                                                                                                                                      | Urgency                                                                                   | Growth                                                                            |
+    	| ---------------------------------- | --------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: |
+    	| Privacy                            | Some data is being tracked that should be visible to only certain individuals                       | Moderate <br>(it can be dangerous for people’s information to get out)                                                                        | Low <br>(not a concern now as this data is not available as it hasn’t been collected yet) | Low <br>(no change recently as the data doesn’t exist as it isn’t collected yet)  |
+    	| Integration with existing database | Being able to combine existing data with new data                                                   | Moderate-High <br>(it’s important to have one consolidated database)                                                                          | Low <br>(not an issue yet as data isn’t being combined)                                   | Low <br>(no change as there isn’t a pair of databases to consolidate yet)         |
+    	| Language Complications             | Existing processes may be biased towards one language                                               | Low <br>(Language can be translated, but not cleanly)                                                                                         | Moderate-Low <br>(Certain tasks may be taking longer to complete)                         | Medium <br>(The longer a task takes, the more consequences occur)                 |
 
     Goals for The Systems
     ---------------------
@@ -255,10 +256,10 @@ Solution Analysis
         | Mobile Friendly                           | Application is accessible and efficient on a mobile device                                                                                     | 2%       |
         | Third Party Messaging Application         | Application includes a third party messaging application (i.e, WhatsApp, message, etc.) for internal use                                       | 2%       |
         <!-- [General Information] -->
+<!-- Split wants onto 2 pages -->
 
     KT Decision Analysis
     --------------------
-
         ### Custom Build
             | Wants                                     | Weight | Comments                                                     | Score | Weighted Score |
             |-------------------------------------------|:------:|--------------------------------------------------------------|:-----:|:--------------:|
@@ -279,7 +280,7 @@ Solution Analysis
             | Total                                     | 100    | - - - - - - - - - - - - - - - - - - - - - -                  | Total | 98             |
             [Faults: (2)]
 
-            ![Figure [NPV_CustomBuild]: Net Present Value for the Custom Build](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_CustomBuild.JPG)
+            <!-- ![Figure [NPV_CustomBuild]: Net Present Value for the Custom Build](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_CustomBuild.JPG) -->
 
 
 		\newpage
@@ -303,7 +304,7 @@ Solution Analysis
             | Total                                     | 100    | - - - - - - - - - - - - - - - - - - - - - -                             | Total | 58.5           |
             [Faults: (41.5)]
 
-            ![Figure [NPV_Breeze]: Net Present Value for Breeze](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_Breeze.JPG)
+            <!-- ![Figure [NPV_Breeze]: Net Present Value for Breeze](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_Breeze.JPG) -->
 
 
 		\newpage
@@ -327,7 +328,7 @@ Solution Analysis
             | Total                                     | 100    | - - - - - - - - - - - - - - - - - - - -         						   | Total | 48.7           |
             [Faults: (51.3)]
 
-            ![Figure [NPV_ServantKeeper]: Net Present Value for ServantKeeper](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_ServantKeeper.JPG)
+            <!-- ![Figure [NPV_ServantKeeper]: Net Present Value for ServantKeeper](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_ServantKeeper.JPG) -->
 
 
 		\newpage
@@ -351,7 +352,7 @@ Solution Analysis
             | Total                                     | 100    | - - - - - - - - - - - - - - - - - - - - -             | Total | 83             |
             [Faults: (17)]
 
-            ![Figure [NPV_Moodle]: Net Present Value for Moodle](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_Moodle.JPG)
+            <!-- ![Figure [NPV_Moodle]: Net Present Value for Moodle](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_Moodle.JPG) -->
 
 
 		\newpage
@@ -375,7 +376,7 @@ Solution Analysis
             | Total                                     | 100    | - - - - - - - - - - - - - - - - - - -       | Total | 65.5           |
             [Faults: (34.5)]
 
-            ![Figure [NPV_Blackboard]: Net Present Value for Blackboard](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_Blackboard.JPG)
+            <!-- ![Figure [NPV_Blackboard]: Net Present Value for Blackboard](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_Blackboard.JPG) -->
 
         <!-- ### Name
             | Wants                                     | Weight | Comments                                    | Score | Weighted Score |
@@ -398,17 +399,46 @@ Solution Analysis
             [Comment] -->
 
 
-    <!-- Net Present Value
+            
+
+    Net Present Value
     -----------------
     	![Figure [NPV_CustomBuild]: Net Present Value for the Custom Build](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_CustomBuild.JPG)
 		![Figure [NPV_Breeze]: Net Present Value for Breeze](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_Breeze.JPG)
 		![Figure [NPV_ServantKeeper]: Net Present Value for ServantKeeper](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_ServantKeeper.JPG)
     	![Figure [NPV_Moodle]: Net Present Value for Moodle](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_Moodle.JPG)
-    	![Figure [NPV_Blackboard]: Net Present Value for Blackboard](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_Blackboard.JPG) -->
+    	![Figure [NPV_Blackboard]: Net Present Value for Blackboard](https://raw.githubusercontent.com/ChrisMaxel/SYS390_FinalProject/master/imagesForBP/NPV/NPV_Blackboard.JPG)
 	
-    <!-- Cost-Benefit Analysis
+    Cost-Benefit Analysis
     ---------------------
-    ![Figure [Testies]: Testies ](https://www.google.com)  -->
+    <!-- ![Figure [Testies]: Testies ](https://www.google.com) --> 
+		Only numbers particular to each option are in the NPV in order to show exclusively the cost differences 
+		of each option. None of these options generate any benefits in a dollar amount (revenue) because they are 
+		all providing a service of intangible benefits for the church, therefore none of the NPV tables show any 
+		benefit numbers. We’re assuming that all options will need a similar number of maintenance hours to keep 
+		the app running efficiently, so the numbers for routine maintenance are not part of the NPV table either. 
+		In a separate maintenance table, we guessed around five hours a week would be required to keep everything 
+		in the system running efficiently, which works out to 260 hours a year. Then we pulled salaries online from 
+		a website, devoted to salaries in Ecuador, for a Software Developer and calculated their hourly wage. From 
+		there, we multiplied hours by the wage and got a yearly maintenance cost of $3,250 for all options.
+
+		Considering the KTDA, the Custom Build option comes out on top by a decent margin, slightly because it is 
+		being designed specifically to the customer’s needs. With a 98 out of a possible 100, the custom build loses 
+		points for not focusing on being mobile friendly nor including a third-party messaging application. Moodle 
+		is second at 83, losing points because it has no integration feature for current data and has no web page 
+		to view for non-registered users outside of a simple log-in screen. Blackboard, Breeze, and Servant Keeper 
+		are all below 70. These three options all lost points partly on account of a lack of an English to Spanish 
+		translation, the biggest want in the KTDA by a large margin.
+
+		For the NPV calculations, all numbers should be a completely accurate cost for the option (excluding taxes) 
+		outside of Blackboard, because Blackboard does not disclose costs until contacted directly by the customer. 
+		The custom build option has the smallest deficit/cost (as mentioned earlier, all options come out as deficits 
+		because no option involves generating any revenue). The custom build initial investment figure is a development 
+		cost, generated from numbers given to us by Professor Bauson, that comes out to $1,440. The custom build annual cost 
+		comes from a US server cost that runs at $15 a month. All other options have a lower NPV (greater cost) than 
+		the custom build option.  
+
+
 
 Recommendation
 ===============
@@ -416,11 +446,6 @@ Recommendation
 	chose the custom build option that we have laid out in this business proposal.  If an issue for the 
 	buyer is time and they are willing to compromise effectiveness for time and buy a pre-built application, 
 	we would recommend Moodle as it scored the second highest (83) on the KTDA.
-
-
-
-
-
 
 
 <!--    Don't touch the items bellow     -->
