@@ -14,9 +14,11 @@ Introduction
     Purpose
     ---------------
     The purpose for this business proposal is to provide Arco Church with several solutions in order to better 
-    manage the classes that they provide to the community. The primary goal is for users to be able to join 
-    classes and view details of said class as well as for teachers to manage the classes they are to instruct.
-    
+    manage the classes that they provide to the community as well as have a centralized, event-planning hub. The primary
+    goal is for users to be able to join classes and view details of said class as well as for teachers to manage
+    the classes they are to instruct. The secondary goal is for administrators to be able to add announcements and events
+    that are available for all users to see.
+
     <!-- Once a user signs up, they will be limited to taking the introductory course. Once they are finished with 
     that course, a variety of others will open up for them to be able to take. There will also be a method of 
     sending messages between students and teachers in order to answer questions or communicate other various 
@@ -39,19 +41,20 @@ Introduction
 
     Problem Definition
     ------------------
-    Arco Church’s current method of managing classes is not sufficient for their needs. 
+    Arco Church’s current method of managing classes and planning events is not sufficient for their needs. 
     A more robust system that is capable of handling more data in a more streamlined and error resistant 
     manner is required. It is our goal to provide the customer with the best possible solution to fix that 
-    problem. It will increase the ease of users to sign up for classes as well as make the process for 
-    teachers to manage their students and class material more simple. It will decrease time required to 
-    sign up for and manage classes as well as increase ease of use for all parties involved.
+    problem. Our solution will increase the ease of users to sign up for classes, make the process for 
+    teachers to manage their students and class material more simple, and provide easy-to-learn tools for
+	planning and publicizing events. Additionally, it will decrease time required to sign up for and manage
+	classes and increase ease of use for all parties involved.
 
 
 
 Customer Details
 ================
 	Our customer is Arco Church, a Christian organization based out of Cuenca, Ecuador. The church was founded
-	1987 under the name Verbo Ministries and has since grown to a congregation of over 2,000 members.  
+	in 1987 under the name Verbo Ministries and has since grown to a congregation of over 2,000 members.  
 	As the customer, they are also the main stakeholder for this application.  Our team interfaced 
 	primarily with Jonathan Guido and his brother, Joel Guido.  Jonathan serves as an administrator for 
 	the Arco’s facilities and Sunday morning services, and Joel serves as an executive pastor.  Both of 
@@ -134,10 +137,15 @@ Problem Analysis
 		Arco Church is currently in need of an application that will allow any individual to attend classes and 
 		keep track of their progress more efficiently. Their current method of course management uses a 
 		localized spreadsheet. This makes keeping track of member attendance and class progress difficult as multiple 
-		teachers and students have to record or report their numbers to the church. When it comes to taking courses, 
-		members do not have much in the way of aid <!-- when it comes --> to choosing courses they qualify for. Teachers also have a 
+		teachers and students have to record or report their numbers to the church. When it comes to taking classes, 
+		members do not have much readily-available information on which classes they are eligible for. Teachers also have a 
 		difficult time keeping track of members who have or have not paid for the course. Overall, the process of 
 		teaching and attending classes could use much-needed simplification and centralization.
+
+		Additionally, Arco Church has expressed a need for an event-planning hub. Currently, most of their announcements are made
+		during the church services in a face-to-face manner. If a church member needs a reminder about where an event is taking place
+		or at what time the event is taking place, he or she must contact someone in the church and ask. Having an available calendar
+		and public message board that any user can go online and quickly see would greatly simplify this process.
 		
 		The population around Arco Church speaks primarily Spanish and may not be as adept with technology as our 
 		team is. This may possibly lead to disconnects between the church technology and the local congregation. There 
@@ -154,16 +162,16 @@ Problem Analysis
     ------------------------
     	| List Concern                       | Clarify Concerns                                                                                    | Severity                                                                                                                                      | Urgency                                                                                   | Growth                                                                            |
     	| ---------------------------------- | --------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: |
-    	| Sunday Service Attendance          | 15-30 new people are going to church each Sunday, but they are losing the same amount               | High <br> (the church is very growth focused, but the church isn’t growing because people are leaving)                                        | Low <br>(very stagnant, there are no trends of the church losing people)                  | Low <br>(hasn’t changed recently)                                                 |
-    	| Class Attendance                   | Some people sign up for classes but aren’t committed and some people miss classes                   | High <br> (classes lose significance if people aren’t going and spots in the class could be taken up by people who aren’t actually attending) | Low <br>(the church is surviving without addressing this issue)                           | Low <br>(this has been a problem for a while and hasn’t changed)                  |
-    	| Data Management                    | What data needs to be tracked and how to centralize data                                            | High <br>(they need to know and understand that data to answer other concerns)                                                                | Low <br>(they haven’t been doing anything about it up until now)                          | Moderate <br>(as they continue to collect data, there’s more data to consolidate) |
-    	| Communication                      | Need to simplify current communication between church authorities and communication to congregation | Moderate <br>(Important questions need to be answered efficiently)                                                                            | Low <br>(The current solution they have is working, just not efficiently)                 | Low <br>(nothing has changed about communication recently)                        |
+    	| Sunday Service Attendance          | 15-30 new people are going to church each Sunday, but they are losing the same amount               | High <br> (the church is very growth focused, but the church is not growing because people are leaving)                                        | Low <br>(very stagnant, there are no trends of the church losing people)                  | Low <br>(hasn’t changed recently)                                                 |
+    	| Class Attendance                   | Some people sign up for classes but are not committed, and some people miss classes                   | High <br> (classes lose significance if people are not going and spots in the class could be taken up by people who are not committed to actually attending) | Low <br>(the church is surviving without addressing this issue)                           | Low <br>(this has been a problem for a while and has not changed)                  |
+    	| Data Management                    | What data needs to be tracked and how to centralize data                                            | High <br>(they need to know and understand that data to answer other concerns)                                                                | Low <br>(they have not been doing anything about it up until now)                          | Moderate <br>(as they continue to collect data, there is more data to consolidate) |
+    	| Communication                      | Need to simplify current communication between church authorities and communication to congregation | Moderate <br>(important questions need to be answered efficiently)                                                                            | Low <br>(the current solution they have is working, just not efficiently)                 | Low <br>(nothing has changed about communication recently)                        |
     	
     	| List Concern                       | Clarify Concerns                                                                                    | Severity                                                                                                                                      | Urgency                                                                                   | Growth                                                                            |
     	| ---------------------------------- | --------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------: |
-    	| Privacy                            | Some data is being tracked that should be visible to only certain individuals                       | Moderate <br>(it can be dangerous for people’s information to get out)                                                                        | Low <br>(not a concern now as this data is not available as it hasn’t been collected yet) | Low <br>(no change recently as the data doesn’t exist as it isn’t collected yet)  |
-    	| Integration with existing database | Being able to combine existing data with new data                                                   | Moderate-High <br>(it’s important to have one consolidated database)                                                                          | Low <br>(not an issue yet as data isn’t being combined)                                   | Low <br>(no change as there isn’t a pair of databases to consolidate yet)         |
-    	| Language Complications             | Existing processes may be biased towards one language                                               | Low <br>(Language can be translated, but not cleanly)                                                                                         | Moderate-Low <br>(Certain tasks may be taking longer to complete)                         | Medium <br>(The longer a task takes, the more consequences occur)                 |
+    	| Privacy                            | Some data is being tracked that should be visible to only certain individuals                       | Moderate <br>(it can be dangerous for people’s information to get out)                                                                        | Low <br>(not a concern now as this data is not available as it hasn’t been collected yet) | Low <br>(no change recently as the data doesn’t exist as it is not collected yet)  |
+    	| Integration with existing database | Being able to combine existing data with new data                                                   | Moderate-High <br>(it is important to have one consolidated database)                                                                          | Low <br>(not an issue yet as data is not being combined)                                   | Low <br>(no change as there is not a pair of databases to consolidate yet)         |
+    	| Language Complications             | Existing processes may be biased towards one language                                               | Low <br>(language can be translated, but not cleanly)                                                                                         | Moderate-Low <br>(certain tasks may be taking longer to complete)                         | Medium <br>(the longer a task takes, the more consequences occur)                 |
 
     Goals for The Systems
     ---------------------
@@ -175,7 +183,8 @@ Problem Analysis
 	6. Give teachers the functionality to easily take class attendance and record the payment status of students.
 	7. Centralize class and student data by integrating it with an already existing database.
 	8. Allow users to switch between and save language preferences fluidly.
-	9. Keep member and staff information secure.
+	9. Provide or incorporate messaging capabilities between administrators.
+	10. Keep member and staff information secure.
 
 
 
@@ -199,11 +208,11 @@ Solution Alternatives
     ---------------------
 		###	[Breeze](https://www.breezechms.com)
 		
-			Breeze is a church software management system, that charges monthly, no matter the size of 
-			the church, that can help members quickly look up members of the church. The leaders can 
-			organize and communicate with groups.  Admins can track and generate reports. This software 
-			is aimed at small to medium sized churches. While simple, breeze does not have much power meaning 
-			that it will not be able to handle a church if it starts to grow in size.
+			Breeze is a church software management system that charges monthly, no matter the size of 
+			the church, and can help members quickly look up other members of the church. The leaders can 
+			organize and communicate with groups. Admins can track and generate reports. This software 
+			is aimed towards small to medium sized churches. While simple, breeze does not have much potential
+			for growth - meaning that it will not be able to handle a church if it starts to grow in size.
 			 
 		### [Servant Keeper](https://www.servantpc.com/)
 		
@@ -224,9 +233,9 @@ Solution Alternatives
 		### [Blackboard ](https://www.blackboard.com/about-us/index.html)
 		
 			Blackboard is a tool with the intended use of education. This product could accomplish 
-			some of the wants we are pursuing. It has a variety of tools that have a weak user interface 
-			that can often be confusing. Blackboard has a great deal of functionality but not of high 
-			quality and user-friendliness.
+			some of the wants we are pursuing but at a pretty extreme expense. It has a variety of tools that
+			have a weak user interface that can often be confusing. Blackboard has a great deal of
+			functionality but not of high quality and user-friendliness.
 
     
 
@@ -244,13 +253,13 @@ Solution Analysis
         | Spanish Translation                       | Application supports an English to Spanish translation                                                                                         | 20%      |
         | User Statistics Tracking                  | Information (i.e, attendance, payment status, name, completion, etc.) is actively tracked and easily accessible/presentable                    | 12%      |
         | Detailed Class Statistics Tracking        | Information (i.e, prerequisites, location, class title, description, teacher name, etc.) is actively tracked and easily accessible/presentable | 10%      |
-        | Account Creation by Admins                | Accounts can be created for users by higher privileged accounts                                                                                | 8%       |
+        | Account Creation by Admins                | Basic accounts can be created for users by higher privileged accounts                                                                         | 8%       |
         | Admin-Only Communication                  | Feature for higher privilege accounts to communicate exclusively to each other                                                                 | 8%       |
-        | Message Board                             | Higher privileged accounts can post messages to a board viewable to any user                                                                   | 8%       |
-        | Current Data Integration                  | Current database can be integrated into new system                                                                                             | 7%       |
-        | Calendar                                  | Easily-accessible calendar that displays information (i.e, events, sermons, meetings, etc.)                                                    | 5%       |
-        | Contact Us Page                           | Page designed to provide information for feedback, questions, communication, etc.                                                              | 5%       |
-        | View Only Access for Non-registered Users | Vital information presented on a page that unregistered users can access upon visiting website                                                 | 5%       |
+        | Message Board                             | Higher privileged accounts can post messages to an announcement board viewable to any user                                                    | 8%       |
+        | Current Data Integration                  | Current home-group database can be integrated into new system                                                                                 | 7%       |
+        | Calendar                                  | Easily-accessible calendar that displays information (i.e, events, sermons, meetings, etc.)                                             | 5%       |
+        | Contact Us Page                           | Page designed to provide information for feedback, questions, communication, etc.                                                             | 5%       |
+        | View Only Access for Non-registered Users | Vital information presented on a page that unregistered users can access upon visiting website                                            | 5%       |
         | Lesson Plan Upload                        | Teachers can customize and upload lesson plans to their class page                                                                             | 4%       |
         | Group Email                               | Teacher can send out mass emails to students, other teachers, and admins                                                                       | 4%       |
         | Mobile Friendly                           | Application is accessible and efficient on a mobile device                                                                                     | 2%       |
@@ -288,12 +297,12 @@ Solution Analysis
             | Wants                                     | Weight | Comments                                                                | Score | Weighted Score |
             |-------------------------------------------|:------:|-------------------------------------------------------------------------|:-----:|:--------------:|
             | Spanish Translation                       | 20     | No support for different languages                                      | 0     | 0              |
-            | User Statistics Tracking                  | 12     | No attendance statistic tracking                                        | 7.5   | 9              |
+            | User Statistics Tracking                  | 12     | No attendance statistics tracking                                        | 7.5   | 9              |
             | Detailed Class Statistic Tracking         | 10     | Not enough class details (prerequisites, etc.)                          | 5     | 5              |
             | Account Creation by Admins                |  8     | Admins cannot create accounts for general users                         | 0     | 0              |
             | Admin-Only Communication                  |  8     |                                                                         | 10    | 8              |
             | Message Board                             |  8     |                                                                         | 7.5   | 6              |
-            | Current Data Integration                  |  7     | Some kind of integration but not fully compatible with current database | 5     | 3.5            |
+            | Current Data Integration                  |  7     | Some kind of integration but not fully compatible with current home-group database | 5     | 3.5            |
             | Calendar                                  |  5     |                                                                         | 10    | 5              |
             | Contact Us Page                           |  5     |                                                                         | 10    | 5              |
             | View Only Access for Non-registered Users |  5     |                                                                         | 10    | 5              |
@@ -318,7 +327,7 @@ Solution Analysis
             | Admin-Only Communication                  |  8     |                                                 					       | 10    | 8              |
             | Message Board                             |  8     | Not fully functional message board              						   | 5     | 4              |
             | Current Data Integration                  |  7     | No kind of current data integration            					  	   | 0     | 0              |
-            | Calendar                                  |  5     | Not fully functional calendar                  						   | 5     | 2.5            |
+            | Calendar                                  |  5     | Not a fully functional calendar                  						   | 5     | 2.5            |
             | Contact Us Page                           |  5     |                                                						   | 7     | 3.5            |
             | View Only Access for Non-registered Users |  5     |                                                 						   | 10    | 5              |
             | Lesson Plan Upload                        |  4     | Limited data upload                            						   | 3     | 1.2            |
@@ -343,7 +352,7 @@ Solution Analysis
             | Message Board                             |  8     |                                                       | 10    | 8              |
             | Current Data Integration                  |  7     | No kind of current data integration                   | 0     | 0              |
             | Calendar                                  |  5     |                                                       | 10    | 5              |
-            | Contact Us Page                           |  5     | Doesn't fully include desired page                    | 7     | 3.5            |
+            | Contact Us Page                           |  5     | Does not fully include desired page                    | 7     | 3.5            |
             | View Only Access for Non-registered Users |  5     | Essentially no page viewable for non-registered users | 3     | 1.5            |
             | Lesson Plan Upload                        |  4     |                                                       | 10    | 4              |
             | Group Email                               |  4     |                                                       | 10    | 4              |
@@ -360,7 +369,7 @@ Solution Analysis
             | Wants                                     | Weight | Comments                                    | Score | Weighted Score |
             |-------------------------------------------|:------:|---------------------------------------------|:-----:|:--------------:|
             | Spanish Translation                       | 20     |                                             | 8     | 16             |
-            | User Statistics Tracking                  | 12     | Can't track all of desired statistics       | 5     | 6              |
+            | User Statistics Tracking                  | 12     | Cannot track all of desired statistics       | 5     | 6              |
             | Detailed Class Statistic Tracking         | 10     |                                             | 7     | 7              |
             | Account Creation by Admins                |  8     |                                             | 10    | 8              |
             | Admin-Only Communication                  |  8     | Supports only in app communication          | 5     | 4              |
@@ -418,11 +427,11 @@ Solution Analysis
 		benefit numbers. We’re assuming that all options will need a similar number of maintenance hours to keep 
 		the app running efficiently, so the numbers for routine maintenance are not part of the NPV table either. 
 		In a separate maintenance table, we guessed around five hours a week would be required to keep everything 
-		in the system running efficiently, which works out to 260 hours a year. Then we pulled salaries online from 
-		a website, devoted to salaries in Ecuador, for a Software Developer and calculated their hourly wage. From 
+		in the system running efficiently, which works out to 260 hours a year. Then we pulled the typical salary
+		in Ecuador for a Software Developer from online sources and calculated their hourly wage. From 
 		there, we multiplied hours by the wage and got a yearly maintenance cost of $3,250 for all options.
 
-		Considering the KTDA, the Custom Build option comes out on top by a decent margin, slightly because it is 
+		Considering the KTDA, the Custom Build option comes out on top by a decent margin, largely because it is 
 		being designed specifically to the customer’s needs. With a 98 out of a possible 100, the custom build loses 
 		points for not focusing on being mobile friendly nor including a third-party messaging application. Moodle 
 		is second at 83, losing points because it has no integration feature for current data and has no web page 
@@ -444,7 +453,7 @@ Recommendation
 ===============
 	From the personal analysis of the team members of 5 Guys and a Noodle, we would recommend that the buyer
 	chose the custom build option that we have laid out in this business proposal.  If an issue for the 
-	buyer is time and they are willing to compromise effectiveness for time and buy a pre-built application, 
+	buyer is time and they are willing to compromise effectiveness for time through buying a pre-built application, 
 	we would recommend Moodle as it scored the second highest (83) on the KTDA.
 
 
