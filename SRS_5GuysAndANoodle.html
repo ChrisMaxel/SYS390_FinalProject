@@ -9,20 +9,392 @@
 
 
 
-heading
+General
 ===========
-    - bullet
-        + bullet
+   Introduction
+   -------------
+   The purpose of this document is to explore the system requirements for the ARCO Hub church management software. 
+   The goal of ARCO Hub is to be able to provide a platform in which classes offered by the church are managed in a more efficient manner. 
+   This will allow for students and teachers to benefit from a system that is better able to handle their needs.
+   Their current model of using an Excel spreadsheet to handle all of the data is not able to sufficiently support the volume of students and classes offered. 
+   ARCO Hub will alleviate this problem as well as improve ease of use.
+   
+   Users
+   --------------
+    Student: The student is the lowest level in the hierarchy of those who have an account. 
+    They will be able to view courses and sign up for those in which they meet the prerequisite requirements. 
+    Additionally, they will be able to use the messaging system and view the calendar.
+    
+    Teacher: This account is in the middle of the  hierarchy of privileges. 
+    In addition to the abilities of students, teachers are able to manages the classes in which they are the teacher. 
+    They are able to mark attendance as well as who has paid the course fee.
+    
+    Administrator: This account is at the top of the hierarchy. In addition to the privileges of the previous account types, they have full ability to view and modify classes, 
+    callendar data, and messages.
+    
+    Collaborating Software
+    -------------
+    WhatsApp: In order for teachers to communicate with their students, 
+    a third party messaging software will be integrated. It will be able to be used by teachers, students, and administrators at their own discretion. 
+    It will transfer text as well as potentially pictures.
+    
+    Home Group Software: Information from database will need to be imported, but direct integration is not required.
+    
+    Other Software
+    ---------------
+    
+    Schedule
+    ---------------
+    
+    Glossary
+    ---------------
+    
+Elements
+=============
+    Systems Respons Table (SRT)
+    -----------------------------
+    
+    Use Cases
+    -----------------------------
+    
+    Logical Data Model
+    -------------------------
 
-Numbers
-================
-    1. Ordered LIst
-    2. order
-    3. list
+    Data Dictionary
+    ---------------------------
+        The Data Dictionary is a detailed description of the entities and attributes of the Logical Data Model. 
+        In addition, one can find relationships between entities laid out here as well as information about how the new database will interact with the current homegroup database.
 
+        (PK) = Primary Key
+        
+        (FK#) = Foreign Key
 
+        **Member** - Represents the users/accounts that exist in the system. This entity already exists in the homegroup database and will be very central to both applications. 
+        It will maintain all of the relationships within that database as well as the additional relationships listed below.
 
+            Relationships:
+                - Has a one-to-many relationship with the member_personal_attr entity.
+                - Has a one-to-many relationship with the session entity.    
+                - Has a one-to-many relationship with the class_section entity.    
+                - Has a one-to-many relationship with the class_section_member entity.    
+                - Has a one-to-many relationship with the document entity.    
+                - Has a one-to-many relationship with the announcement entity.    
+                - Has a one-to-many relationship with the message entity.    
+                - Has a one-to-many relationship with the attendance entity.
+        
+            Attributes:
+                - id (PK)
+                - first_name
+                - last_name
+                - email
+                - phone_number
+                - gender
+                - birthday
+                - baptism_status
+                - marital_status_id (FK)
+                - how_did_you_find_out_id (FK) - a key that provides information on how someone found out about a home group.
+                - is_a_parent
+                - join_date
+                - is_active
 
+        Any additional attributes given to a member will be handled through the member_personal_attr and personal_attr entities.
+
+        **Meeting** - Represents the date and time that meetings, events or classes will be held. This entity also already exists in the homegroup database. 
+        It will maintain all the current relationships it has and will take on the additional ones listed below.
+
+            Relationships:
+                - Has a one-to-many relationship with the class_section_meeting entity.
+                - Has a one-to-many relationship with the event entity.
+
+            Attributes:
+                - id (PK)
+                - date
+                - time
+
+        **Member_personal_attr** - Holds the value that a member has for a personal attribute.
+
+            Relationships:
+                - Has a many-to-one relationship with the member entity.
+                - Has a many-to-one relationship with the personal_attr entity.
+
+            Attributes:    
+                - member_id (PK, FK1)
+                - personal_attr_id (PK, FK2)        
+                - value - the value of the personal attribute for the corresponding member.
+
+        **Personal_attr** - Provides a list of all attributes a member can have.
+
+        Relationships:
+        - Has a one-to-many relationship with the member_personal_attr entity.
+
+        Attributes:
+        
+        - id (PK)
+        
+        - desc - a description of the attribute
+
+        Session - Provides details on the session of a logged in member.
+
+        Relationships:
+        
+        - Has a many-to-one relationship with the member entity.
+
+        Attributes:
+        
+        - id (PK)
+        
+        - member_id (FK)
+        
+        - login_datetime
+
+        - ip_address
+
+        - is_active
+
+        Class - Each instance provides information about one type of class offered by Arco.
+
+        Relationships:
+        
+        - Has a one-to-many relationship with the class_section entity.
+        
+        - Has two one-to-many relationships with the prerequisite entity.
+
+        Attributes:
+        
+        - id (PK)
+
+        - name
+
+        - desc
+
+        - created_date
+
+        - is_active
+
+        Prerequisite - Contains classes that need to be completed before a member can take another class.
+
+        Relationships:
+        
+        - Has two many-to-one relationships with the class entity.
+
+        Attributes:
+        
+        - class_id (PK, FK1) - id of the class containing the prerequisite.
+        
+        - prereq_class_id (PK, FK2) - id of the class that is the prerequisite.
+
+        Message - Contains information about messages sent between users.
+
+        Relationships:
+        
+        - Has two many-to-one relationships with the member entity
+
+        Attributes:
+        
+        - id (PK)
+
+        - sender_id (FK1)
+
+        - receiver_id (FK2)
+
+        - text - the contents of the message.
+
+        - status - the delivery status of the message.
+
+        - datetime
+
+        Announcement - Contains information about public messages posted.
+
+        Relationships:
+        
+        - Has a many-to-one relationship with the member entity.
+
+        Attributes:
+        
+        - id (PK)
+
+        - author_id (FK1)
+
+        - title
+
+        - body - the textual contents of the announcement
+
+        - datetime
+
+        Document - Contains information about documents that a user uploads to the server hosting the database (specifically lesson plans for teachers).
+
+        Relationships:
+        
+        - Has a one-to-many relationship with the class_section_document entity.
+
+        - Has a many to one relationship with the member entity.
+
+        Attributes:
+        
+        - id (PK)
+
+        - owner_id (FK1)
+
+        - name - the saved name of the document.
+
+        - filetype - the type of the document (based on file extension).
+
+        - path - the path to the document on the server.
+
+        - uploaded_date
+
+        Event - Contains information about an event taking place.
+
+        Relationships:
+        
+        - Has a many-to-one relationship with the meeting entity.
+
+        - Has a many-to-one relationship with the location entity.
+
+        Attributes:
+        
+        - id (PK)
+
+        - meeting_id (FK1) - a key that provides the date and time of the event.
+
+        - location_id (FK2)
+
+        - desc - a description of the event.
+
+        Location - Contains information about the location of a class or event.
+
+        Relationships:
+        
+        - Has a one-to-many relationship with the event entity.
+        
+        - Has a one-to-many relationship with the class_section entity.
+
+        Attributes:
+        
+        - id (PK)
+        
+        - name
+
+        - desc - a description of the location/directions to get there.
+
+        - latitude
+
+        - longitude
+
+        Class_section - Contains information on a particular instance of an offered class (we like the terminology section).
+
+        Relationships:
+        
+        - Has a one-to-many relationship with the class_section_meeting entity.
+
+        - Has a many-to-one relationship with the class entity.
+
+        - Has a many-to-one relationship with the member entity.
+
+        - Has a one-to-many relationship with the class_section_member entity.
+
+        - Has a one-to-many relationship with the class_section_document entity.
+
+        - Has a many-to-one relationship with the location entity.
+
+        Attributes:
+        
+        - id (PK)
+
+        - class_id (FK1)
+
+        - location_id (FK2)
+
+        - teacher_id (FK3)
+
+        - start_date
+
+        - end_date
+
+        - is_active
+
+        Class_section_member - Contains information about each member of each section of a class.
+
+        Relationships:
+        
+        - Has a many-to-one relationship with the member entity.
+
+        - Has a many-to-one relationship with the class_section entity.
+
+        Attributes:
+        
+        - member_id (PK, FK1)
+
+        - class_section_id (PK, FK2)
+
+        - is_paid - has the user paid the fee for the class.
+
+        - request_enrollment_date - the date the user requested to join a class.
+
+        - enrolled_date - the date the user was accepted into a class.
+
+        - completed_date - the date the user completed the class (NULL if incomplete).
+
+        - Class_section_document - Contains information about documents that pertain to a specific section of a class.
+
+        Relationships:
+        
+        - Has a many-to-one relationship with the document entity.
+
+        - Has a many-to-one relationship with the class_section entity.
+
+        Attributes:
+        
+        - class_section_id (PK, FK1)
+
+        - document_id (PK, FK2)
+
+    Class_section_meeting - Contains information about each meeting for a specific section of a class.
+
+        Relationships:
+        
+        - Has a one-to-many relationship with the attendance entity.
+
+        - Has a many-to-one relationship with the meeting entity.
+
+        - Has a many-to-one relationship with the class_section entity.
+
+        Attributes:
+        
+        - id (PK)
+
+        - meeting_id (FK1)
+
+        - class_section_id (FK2)
+
+        Attendance
+
+        Relationships:
+        
+        - Has a many-to-one relationship with the class_section_meeting entity.
+
+        - Has a many-to-one relationship with the member entity.
+
+        Attributes:
+        
+        - class_section_meeting_id (PK, FK1)
+
+        - member_id (PK, FK2)
+
+        - is_present - whether or not the member was present at a class meeting.
+
+    
+    Logical Process Model
+    ----------------------------
+    
+    User Expericence Diagrams
+    ---------------------------
+    
+    Wireframes
+    -----------------------------
+    
+    Non-Functional Requirements
+    -----------------------------
 
 
 
