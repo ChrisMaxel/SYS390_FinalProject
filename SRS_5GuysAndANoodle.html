@@ -550,6 +550,121 @@ Elements
     
     Non-Functional Requirements
     -----------------------------
+	
+		### Non-Functional User Requirements
+			
+			Usability:
+			
+			Administrators, teachers, students, and unregistered users will be utilizing this system. 
+			For students and unregistered users, functionality will be limited and only a small portion of information will be viewable (in comparison to higher-level users). 
+			The interface for these lower-level users will be designed in a simplistic and intuitive fashion in order to efficiently display information.
+			
+			Teachers and Admins will have a higher level of functionality and have much more information available, so the design will be more detailed and capable of handling all the actions required for these users. 
+			However, the system will still be designed simplistically and intuitively for these higher-level users in order to increase efficiency and usability. 
+			More pages will be available to these users to more effectively satisfy their needs of higher functionality.
+			
+			The general look and feel of the system will be similar to the church’s current website to increase familiarity and approachability. 
+			The logo will be displayed on all pages and the color scheme will be similar to the current website. A menu bar will be accessible on most pages to make the website easier to navigate.
+			 
+			 
+			Accessibility:
+			
+			This website will be fully functional and comprehensible in both English and Spanish as this website will be used almost entirely in Ecuador, a Spanish-speaking country. 
+			English will also be used so that Taylor University developers can understand and update the system as needed. 
+			The software will be designed for easy and efficient use on both a desktop computer and mobile device. No adjustments will be made for users with disabilities as this was deemed unnecessary by the customer.
+			 
+			 
+			Availability:
+			
+			The system will be active and running 24/7. Admins may have to intervene for approval of accounts or updating information on the system. 
+			However, the system should remain functional without intervention outside of emergency maintenance. Maintenance is currently estimated to be around 5 hours per week. 
+			Any maintenance should take place at night because web traffic should be much lower then.
+			 
+			 
+			Documentation and Training:
+			
+			Documentation instructing users on how to use the system will be provided upon delivery. 
+			Different documentation will be provided for different levels of access, as the capabilities and functions will vary depending on the level of access. 
+			As the system is upgraded and changed, the documentation will be updated accordingly.
+			 
+			No on the job training or instruction will be required to sufficiently utilize any part of the system. 
+			All parts of the system should be fairly intuitive, and the documentation should handle all training necessary to use the system.
+			
+		### Non-Functional System Requirements
+		
+			Performance:
+			
+			The most typical interactions for this system will be navigating between pages on the website, creating and modifying classes, creating and modifying calendar entries, and creating and modifying accounts.
+			·      Navigating between web pages should take no longer than 3 seconds
+			·      Creating or modifying any class, calendar, or account information should take a few seconds
+			·      All activities will be stored in the database in real time
+			 
+			The system will be designed to support as many users as the church requires at one time. System performance may drop if a large number of users are online at one time.
+			 
+			 
+			Capacity:
+			
+			The system will be able to host any number of users necessary for the church’s classes. The system can be upgraded to adapt to a fluctuating number of users as the church grows in size. 
+			Class information will be marked as inactive when a class is completed. This information will no longer be viewable to any user; however, an admin account could access this information if necessary. 
+			Calendar information will be hidden once a month changes to the next, but this information will still be viewable to any registered user. All other information will remain active unless deleted by an admin.
+			
+			Security:
+			
+			Access Control:
+			
+			There are four levels of access for registered users (non-registered users will only be able to access the home page and a login/register for an account page).
+			 
+			1.     Administrator
+				- Will be able to view any and all provided personal information for any user in the entire system
+				- Can modify any personal information as necessary
+				- Can change permissions of an account
+				- Can approve students for a class
+				- Can create accounts for new users of any access level
+				- Can create, modify, and view class information
+				- Can create, modify, and view calendar information
+			 
+			2.     Teacher
+				- Can approve students for a class
+				- Can view student information			
+				- Can modify, and view class information				
+				- Can view calendar information
+				
+			3.     Student		
+				- Can view detailed class information				
+				- Can view calendar information				
+				- Can view messaging information				
+				- Can view announcements information				
+				- Can view contact information				
+				- Can sign up for classes
+			 
+			4.     User		
+				- Can view basic class information (title, description, teacher, etc.)			
+				- Can view calendar information			
+				- Can sign up for classes
+				
+			We want to exercise the Security principle of Least Privilege, which in practice means that every program and every user of the system should operate using the least set of privileges necessary to complete the job.
+			
+			Network Connectivity is a concern due to the system containing personal information of a large number of people. 
+			Access is limited to just viewing the home page and a login/register for an account screen when a user is not registered or logged into the system. 
+			This prevents anyone outside the system from acting maliciously with any content of the system. When a user is registered in the system, 
+			their only permissions are viewing some information and signing up for a class. Since the permissions are very limited to only viewing some information and no personal data, 
+			this prevents any serious malicious activity. The only place where the system can be seriously corrupted is from an admin account, which must be pre-approved by another admin. 
+			
+			Confidentiality, availability, and user privacy are certainly a concern in a system that contains substantial personal information for a very large group of people. 
+			For anyone that is a registered user (admin, teacher, student, etc.), they can access any other user’s name and email. 
+			However, the system will never display one’s personal information (outside of the name and email) to another person who is not a pre-approved admin.
+			
+			No financial information will be stored in the system because no monetary transactions will ever happen on the website. 
+			The only information that at all pertains to finances of any kind will be a simple indicator that displays whether or not a student has paid for the class, which will only be viewable to admins and teachers.
+			
+			Longevity:
+			
+			The system should last indefinitely, as long as the church’s size is still manageable on the system being provided and no new musts or wants are introduced that aren’t 
+			already fulfilled by the system or can’t be upgraded into the system. Technological advances will undoubtedly surpass the capabilities of the system we have designed, 
+			but these advanced options will almost assuredly be costlier to implement (compared to keeping the current system) 
+			and might not necessarily work better than the current system in addressing the needs of the church. Updates and upgrades will be possible for the system being developed after installation.
+
+
 
 
 
