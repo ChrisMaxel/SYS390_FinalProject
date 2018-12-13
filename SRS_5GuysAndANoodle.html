@@ -24,22 +24,27 @@ General
    
    Users
    --------------
-    Student: The student is the lowest level in the hierarchy of those who 
-    have an account. They will be able to view courses and sign up for those 
-    in which they meet the prerequisite requirements. Additionally, they will 
-    be able to use the messaging system and view the calendar.
+        Basic User: The basic user is the lowest level in the hierarchy of those
+        who have an account. They will be able to view courses and sign up for those
+        in which they meet the prerequisite requirements. Additionally, they will
+        be able to use the messaging system and view the calendar.
 
-    Teacher: This account is in the middle of the hierarchy of privileges. 
-    In addition to the abilities of students, teachers can manage the classes 
-    in which they are the teacher. They can mark attendance as well as who has 
-    paid the course fee.
+        Student: The student is the next level up in the hierarchy of permissions. The
+        main difference between a student and a basic user is that students are or have 
+        been a part of a class. Thus, they can view information
+        about the classes they are currently enrolled in or have been enrolled in.
 
-    Administrator: This account is at the top of the hierarchy. In addition 
-    to the privileges of the previous account types, they have the full 
-    ability to view and modify classes, calendar data, and messages.
+        Teacher: This account is in the middle of the hierarchy of privileges.
+        In addition to the abilities of students and basic users, teachers can manage 
+        the classes
+        in which they are the teacher. They can mark attendance as well as who has
+        paid the course fee.
 
-    Unregistered: These users can access the home page where they will be 
-    prompted to create an account.
+        Administrator: This account is at the top of the hierarchy. In addition
+        to the privileges of the previous account types, they have the full
+        ability to view and modify classes, calendar data, messages, and user account 
+        information.
+
 	
     Collaborating Software
     -------------
@@ -89,22 +94,50 @@ Elements
 =============
     Systems Respons Table (SRT)
     -----------------------------
-        | ID | Source | Trigger                            | Response            | Major Outputs | External Destinations |
-        | -- | ------ | ---------------------------------- | ------------------- | ------------- | --------------------- |
-        | A1 | Admin  | Approves pending Account           | Account Approved    | Account Approval; Email |  |
-        | A2 | Admin  | Changes Permissions for an Account | Permissions Updated | Updated Account; Permission Change; Email |  |
-        | A3 | Admin  | Suspends an Account                | Account Suspended   | Permission change; Email |  |
-        | A4 | Admin  | Posts Public Message               | Message Posted      |  |  |
-        | A5 | Admin  | Adds Event to Calendar             | Event Added         |  |  |
-        | A6 | Admin  | Removes Event From Calendar        | Event Removed       |  |  |
-        | A7 | Admin  | Modifies Calendar/Event            | Event Modified      |  |  |
-        | A8 | Admin  | Creates new class                  | New Class Added     |  |  |
-        | A9 | Admin  | Deletes existing class             | Class is deleted    |  |  |
+        ### Admin SRT
+        | ID | Source | Trigger                            | Response            | Major Outputs                                        | External Destinations                         |
+        |:--:| :----: | :--------------------------------: | :-----------------: | :--------------------------------------------------: | :-------------------------------------------: |
+        | A1 | Admin  | Approves pending Account           | Account Approved    | Account Approval; <br> Email                         | Database; <br> Account Owner                  |
+        | A2 | Admin  | Changes Permissions for an Account | Permissions Updated | Updated Account; <br> Permission Change; <br> Email  | Account Database; <br> Database Account owner |
+        | A3 | Admin  | Suspends an Account                | Account Suspended   | Permission change; <br> Email                        | Database; <br> Account owner                  |
+        | A4 | Admin  | Posts Public Message               | Message Posted      | Message; <br> New Post Notification                  | All Users’ Homepage; <br> All Users’ email    |
+        | A5 | Admin  | Adds Event to Calendar             | Event Added         | Display New Event; <br> Event Information            | Public Calendar; <br> Database                |
+        | A6 | Admin  | Removes Event From Calendar        | Event Removed       | Displays Changed Calendar; <br> Event Information    | Public Calendar; <br> Database                |
+        | A7 | Admin  | Modifies Calendar/Event            | Event Modified      | Displays Updated Event; <br> Event Information       | Public Calendar; <br> Database                |
+        | A8 | Admin  | Creates new class                  | New Class Added     | New Class Details; <br> Updated class list           | Database; <br> Classes page                   |
+        | A9 | Admin  | Deletes existing class             | Class is deleted    | Class details to be removed; <br> Updated Class List | Database; <br> Classes page                   |
 
 
-        |  |  |  |  |  |  |
+        ### Teacher SRT
+        | ID | Source  | Trigger                                 | Response                            | Major Outputs                                   | External Destinations                          |
+        |:--:| :-----: | :-------------------------------------: | :---------------------------------: | :---------------------------------------------: | :--------------------------------------------: |
+        | T1 | Teacher | Submits Attendance                      | Attendance Submitted                | Attendance Data;<br> Class Page                 | Database;<br> Teacher’s browser                |
+        | T1 | Teacher | Marks Payment Status                    | Student Marked as Paid              | Updated Payment status;<br> Notification Email  | Database & Roster page;<br> User’s email       |
+        | T3 | Teacher | Uploads Lesson Plan                     | Lesson Plan Uploaded                | Lesson Plan;<br> Displays Lesson Plan           | Database;<br> Course Page                      |
+        | T4 | Teacher | Mass Email Sendout                      | Emails Sent                         | Email                                           | Course Participants                            |
+        | T5 | Teacher | Changes Class Details                   | Class Details Updated               | Updated class details;<br> Email                | Database;<br> Class page;<br> Students’ email; |
+        | T6 | Teacher | Sends Message to Student                | Student Receives Message            | Message information;<br> Reply                  | Database;<br> Student’s email                  |
+        | T7 | Teacher | Marks Completion of Course              | Course marked Completed for student | Completed class data;<br> Email                 | Database;<br> Student                          |
+        | T8 | Teacher | Approves a user’s request to join class | User joined class                   | Email;<br> User data & Updated Permissions      | User’s email;<br> Database;                    |
+        
+        ### Student SRT
+        | ID | Source   | Trigger                   | Response                     | Major Outputs       | External Destinations     |
+        |:--:| :------: | :-----------------------: | :--------------------------: | :-----------------: | :-----------------------: |
+        | S1 | Students | Checks Class Progress     | Show Progress                | Class Progress      | Student’s browser         |
+        | S2 | Students | Sends Question to Teacher | Question sent                | Question; Message   | Teacher’s email; Database |
+        | S3 | Students | Withdraws From Class      | Student withdrawn from class | Student Data; Email | Database; Teacher’s email |
 
-
+        ### User SRT
+        | ID | Source   | Trigger                     | Response           | Major Outputs                            | External Destinations              |
+        |:--:| :------: | :-------------------------: | :----------------: | :--------------------------------------: | :--------------------------------: |
+        | U1 | User     | Visits Application Web Page | Web Page Loads     | Displays View-only screen                | User’s Browser                     |
+        | U2 | User     | Registers an Account        | Account Registered | New Pending Account; Email; Notification | Database; User’s email; All Admins |
+        | U3 | User     | Logs In                     | Logged In          | Displays Home Page                       | User’s Browser                     |
+        | U4 | User     | Logs In                     | Link Opens         | Displays Contact Page                    | User’s Browser                     |
+        | U5 | User     | Requests access to a Class  | Access requested   | Email; Notification; Enrollment Request  | Teacher’s email; Teacher; Database |
+        | U6 | User     | Views Calendar              | Calendar Viewed    | Events on Calendar                       | User’s Browser                     |
+        | U7 | User     | Changes Language            | Language Changed   | Translated page                          | User’s Browser                     |
+        | U8 | User     | Logs out                    | Logged Out         | View-only screen; Session Info           | User’s browser; database           |
 
     
     Use Cases
